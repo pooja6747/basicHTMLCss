@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Normal function and arrow function</h1>
+    <script>
+    //     function add(x,y){
+    //         console.log(arguments);
+    //        return x+y;
+    //     }
+
+    //   console.log( add(5,5));
+
+
+      const add = (x,y)=>{
+        // console.log(arguments); 
+        //Argument object is not available in arrow function ,this command is not work in arrow function
+           return x+y;
+      }
+
+     // console.log( add(5,5));
+
+
+
+      //second point : implicitely return by arrow function
+    //   function mask (){
+    //     100;
+    //   }
+
+    //   console.log(mask);
+
+      const mask1 = () => 100;
+
+      console.log(mask1);
+
+
+      //Third point: arrow function do not have their own this
+      let userInfo={
+        name:"code",
+        fullName(){
+            const test=()=>{
+                console.log(this.name+"====");
+            }
+            test();
+            console.log(this.name+'normal function');
+
+        },
+
+        fullName2:()=>{
+            console.log(this.name+'arrow function');
+        }
+
+
+      }
+
+      userInfo.fullName();
+      userInfo.fullName2();
+     
+    </script>
+</body>
+</html>
