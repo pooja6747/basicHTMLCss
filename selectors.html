@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ID selector
+       #para{
+            background-color: red;
+        }
+
+        #div1{
+background-color: cyan;
+        }
+
+        class selector
+        .div2{
+            background-color: blueviolet;
+        }
+
+
+        element/type selector
+        p{
+            background-color: bisque;
+            color: brown;
+        }
+
+        div{
+            background-color: cornflowerblue;
+            color: blue;
+        } */
+
+      /* 
+      Grouping selector
+      p,
+      div {
+        background-color: blueviolet;
+      }
+
+      h3 {
+        background-color: antiquewhite;
+      } */
+
+      /*Descendant*/
+      #box p{
+        background-color: green;
+      }
+      div p span{
+        background-color: chartreuse;
+      }
+
+      /*direct > symbol imp child*/
+      #list >li{
+        color: burlywood;
+      }
+
+      /*Adjacent slibling selector*/
+      ul + p{
+        color: red;
+      }
+      /*General slibling selector(~)*/
+      ul~p{
+        color: darkmagenta;
+      }
+
+      /*Pseudo-classes*/
+      li:first-child{
+        color: chocolate;
+      }
+
+      /*pseudo elements*/
+      p::first-line{
+background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- selectors
+    1)id = unique
+    2)class = multiple
+    3)element = div , p 
+    4) grouping selector = p and div both at a time
+    advance selector
+    1. simple selector => type(element) selector , class selector , ID selector , Universal selector(*)
+    2.combinators selector => Descendant(Grouping) selector, Direct child(>) selector , 
+    Adjacent slibling(+) selector , General slibling selector(~)
+    3.Attribute selector => A[attr]
+    4. Pseudo-classes => 33total classes (eg :hover , :disabled, : unabled)
+     & pseudo-elements=> (eg ::first-letter, ::placeholder)
+ -->
+
+    <p id="para">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus.
+      Iusto quaerat repellendus quia doloremque tenetur, quas, accusamus
+      veritatis explicabo dolorem animi sed tempora minima ad similique eius
+      dolore consectetur.
+    </p>
+
+    <div class="div2">This is div element</div>
+
+    <div class="div2">This is div element</div>
+    <h3>grouping selector work</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla animi
+      asperiores tempore velit eos repellat veritatis blanditiis debitis quas in
+      accusantium odio consequuntur, ipsa dignissimos eligendi quod harum
+      molestias odit?
+    </p>
+
+    <h1>CSS Descendant selectors</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta tempore harum quidem! Soluta, quia accusamus quos
+         doloremque voluptatibus error, repudiandae in explicabo vel nisi fuga saepe esse obcaecati sapiente!
+    Impedit a, nulla quod ipsum non nesciunt itaque, explicabo repellat libero repudiandae delectus aliquam 
+    dolorum fugiat? Molestiae et ipsa, nemo, voluptates tenetur dicta impedit dignissimos ab repudiandae, amet qui quam.</p>
+
+    <div id="box">
+         <span>Hello</span>
+
+         <p>Lorem ipsum,<span>dolor sit amet consectetur adipisicing elit</span> .Quisquam ducimus numquam accusantium minima possimus laborum similique incidunt necessitatibus
+             ut qui quia voluptates inventore quo omnis autem, dolorem quis ipsa consectetur.</p>
+    </div>
+
+    <ul id="list">
+        <li>Country</li>
+        <li>India</li>
+        <li>America</li>
+        <li>Sounth africa</li>
+        <ul>State
+<li>Maharashtra</li>
+<li>Karnataka</li>
+        </ul>
+    </ul>
+<p>for check  Adjacent slibling(+) selector means first p after ul </p>
+
+<p>for check  General slibling selector(~) means all p after ul </p>
+  </body>
+</html>
